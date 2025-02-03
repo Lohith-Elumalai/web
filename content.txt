@@ -1,0 +1,8 @@
+Nav (Home,etc)
+Display(sponsor)->(click) prod
+Where u left->prod
+Offer-offer categories
+Categories- MEN,
+women,
+kids
+

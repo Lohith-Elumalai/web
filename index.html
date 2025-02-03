@@ -3,14 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        #content {
+            margin-top: 80px;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 25px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <nav>
-        Home | Cart | Profile
+        <ul>
+            <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#" onclick="loadPage('cart')">Cart</a></li>
+            <li><a href="#" onclick="loadPage('profile')">Profile</a></li>
+        </ul>
     </nav>
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home page content.</p>
+
+    <div id="content">
+        <h1>Welcome to Our Website!</h1>
+        <p>Discover amazing products and manage your profile with ease.</p>
+        <button class="cta-button" onclick="loadPage('cart')">Shop Now</button>
+    </div>
+
+    <script>
+        function loadPage(page) {
+            const content = document.getElementById("content");
+
+            if (page === "home") {
+                content.innerHTML = "<h1>Welcome to Our Website!</h1><p>Discover amazing products and manage your profile with ease.</p><button class='cta-button' onclick=\"loadPage('cart')\">Shop Now</button>";
+            } else if (page === "cart") {
+                content.innerHTML = "<h1>Your Cart</h1><p>Here is your shopping cart.</p>";
+            } else if (page === "profile") {
+                content.innerHTML = "<h1>Your Profile</h1><p>Welcome to your profile page.</p>";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,274 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern E-Commerce</title>
+    <title>Fashion Store - Myntra Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #f5f5f5;
-        }
-
-        nav {
-            background: #ffffff;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        /* Header Styles */
+        .header {
+            background-color: #ff3f6c;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 1.5rem;
+            color: white;
+            font-size: 24px;
             font-weight: bold;
-            color: #2c3e50;
+        }
+
+        .search-bar {
+            width: 40%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .user-actions {
+            color: white;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Navigation Styles */
+        .nav-bar {
+            margin-top: 60px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 99;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            justify-content: space-around;
+            list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: color 0.3s;
+            color: #282c3f;
+            font-weight: bold;
         }
 
-        .nav-links a:hover {
-            color: #AD87EC;
+        /* Main Content Styles */
+        .main-content {
+            margin-top: 120px;
+            padding: 20px;
         }
 
-        .container {
-            margin-top: 80px;
-            padding: 2rem 5%;
+        .banner {
+            background-image: url('https://source.unsplash.com/random/1600x600');
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .category-card {
+            text-align: center;
+        }
+
+        .category-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .product-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #eaeaec;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
             transition: transform 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .product-image {
             width: 100%;
-            height: 200px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
         }
 
-        .product-title {
-            margin: 1rem 0;
-            color: #2c3e50;
-            font-size: 1.1rem;
-        }
-
-        .product-price {
-            color: #AD87EC;
+        .price {
+            color: #ff3f6c;
             font-weight: bold;
-            font-size: 1.2rem;
+            margin: 10px 0;
         }
 
-        .btn {
-            padding: 0.5rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: #AD87EC;
+        /* Footer Styles */
+        .footer {
+            background-color: #2a2a2a;
             color: white;
+            padding: 40px 20px;
+            margin-top: 50px;
         }
 
-        .btn-primary:hover {
-            background: #8c6ac4;
-        }
-
-        .cart-item {
-            background: white;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
+        .footer-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .profile-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .footer-section h3 {
+            margin-bottom: 15px;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
+        .footer-section ul {
+            list-style: none;
         }
 
-        input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 0.5rem;
+        .footer-section ul li {
+            margin-bottom: 8px;
         }
 
-        @media (max-width: 768px) {
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">ShopCart</div>
-        <div class="nav-links">
-            <a href="#" onclick="loadPage('home')">Home</a>
-            <a href="#" onclick="loadPage('cart')">Cart (<span id="cartCount">0</span>)</a>
-            <a href="#" onclick="loadPage('profile')">Profile</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">FashionStore</div>
+        <input type="text" class="search-bar" placeholder="Search for products, brands and more">
+        <div class="user-actions">
+            <span><i class="fas fa-user"></i> Login</span>
+            <span><i class="fas fa-shopping-bag"></i> Cart</span>
         </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Studio</a></li>
+        </ul>
     </nav>
 
-    <div class="container" id="content">
-        <!-- Home Page Content -->
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200" class="product-image" alt="Product">
-                <h3 class="product-title">Wireless Headphones</h3>
-                <p class="product-price">$199.99</p>
-                <button class="btn btn-primary" onclick="addToCart(1)">Add to Cart</button>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="banner"></div>
+
+        <div class="categories">
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/201x201" alt="Category">
+                <h3>Top Brands</h3>
             </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200" class="product-image" alt="Product">
-                <h3 class="product-title">Smart Watch</h3>
-                <p class="product-price">$299.99</p>
-                <button class="btn btn-primary" onclick="addToCart(2)">Add to Cart</button>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/202x202" alt="Category">
+                <h3>New Arrivals</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/203x203" alt="Category">
+                <h3>Sale</h3>
             </div>
         </div>
-    </div>
 
-    <script>
-        let cartItems = [];
-        
-        function loadPage(page) {
-            const content = document.getElementById("content");
-            
-            if(page === 'home') {
-                content.innerHTML = `
-                    <div class="products-grid">
-                        <div class="product-card">
-                            <img src="https://via.placeholder.com/200" class="product-image" alt="Product">
-                            <h3 class="product-title">Wireless Headphones</h3>
-                            <p class="product-price">$199.99</p>
-                            <button class="btn btn-primary" onclick="addToCart(1)">Add to Cart</button>
-                        </div>
-                        <div class="product-card">
-                            <img src="https://via.placeholder.com/200" class="product-image" alt="Product">
-                            <h3 class="product-title">Smart Watch</h3>
-                            <p class="product-price">$299.99</p>
-                            <button class="btn btn-primary" onclick="addToCart(2)">Add to Cart</button>
-                        </div>
-                    </div>
-                `;
-            }
-            else if(page === 'cart') {
-                content.innerHTML = `
-                    <h2>Your Cart</h2>
-                    <div id="cartItems">
-                        ${cartItems.map(item => `
-                            <div class="cart-item">
-                                <div>
-                                    <h3>${item.name}</h3>
-                                    <p>$${item.price}</p>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary" onclick="removeFromCart(${item.id})">Remove</button>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div style="text-align: right; margin-top: 2rem;">
-                        <h3>Total: $${calculateTotal()}</h3>
-                        <button class="btn btn-primary">Checkout</button>
-                    </div>
-                `;
-            }
-            else if(page === 'profile') {
-                content.innerHTML = `
-                    <div class="profile-section">
-                        <h2>Your Profile</h2>
-                        <form>
-                            <div class="form-group">
-                                <label>Name:</label>
-                                <input type="text" value="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label>Email:</label>
-                                <input type="email" value="john@example.com">
-                            </div>
-                            <button class="btn btn-primary">Save Changes</button>
-                        </form>
-                    </div>
-                `;
-            }
-        }
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://source.unsplash.com/random/301x301" class="product-image" alt="Product">
+                <h4>Men's T-Shirt</h4>
+                <p class="price">₹599</p>
+                <button>Shop Now</button>
+            </div>
+            <!-- Add more product cards similarly -->
+        </div>
+    </main>
 
-        function addToCart(productId) {
-            const products = [
-                { id: 1, name: 'Wireless Headphones', price: 199.99 },
-                { id: 2, name: 'Smart Watch', price: 299.99 }
-            ];
-            
-            const product = products.find(p => p.id === productId);
-            cartItems.push(product);
-            updateCartCount();
-        }
-
-        function removeFromCart(productId) {
-            cartItems = cartItems.filter(item => item.id !== productId);
-            loadPage('cart');
-            updateCartCount();
-        }
-
-        function calculateTotal() {
-            return cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-        }
-
-        function updateCartCount() {
-            document.getElementById('cartCount').textContent = cartItems.length;
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stores</h3>
+                <ul>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FashionStore. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

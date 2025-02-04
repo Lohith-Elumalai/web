@@ -17,7 +17,11 @@
     top: 0;
     z-index: 100;
 }
-
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .logo {
     color: white;
     font-size: 24px;

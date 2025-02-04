@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UrbanGlow</title>
     <link rel="stylesheet" href="./style/index.css">
-    <style>
-        
-    </style>
+    <script defer src="./script/index.js"></script>
 </head>
 <body>
     <header class="header">
@@ -15,9 +13,9 @@
         <div class="logo">UrbanGlow</div>
         <input type="text" class="search-bar" placeholder="Search for products, brands and more">
         <div class="user-actions">
-            <span><i class="fas fa-user"></i> <img src="./resource/profile-icon.png" height="25px" width="25px"></span>
-            <span><i class="fas fa-shopping-bag"></i> <img src="./resource/wishlist-icon.png" height="25px" width="25px"></span>
-            <span><i class="fas fa-shopping-bag"></i> <img src="./resource/cart-icon.png" height="25px" width="25px"></span>
+            <span><img src="./resource/profile-icon.png" height="25px" width="25px"></span>
+            <span><img src="./resource/wishlist-icon.png" height="25px" width="25px"></span>
+            <span><img src="./resource/cart-icon.png" height="25px" width="25px"></span>
         </div>
     </header>
 
@@ -32,11 +30,10 @@
         </ul>
     </nav>
 
-
     <main class="main-content">
         <div class="banner"></div>
 
-        <div class="categories">
+        <section class="categories">
             <div class="category-card">
                 <img src="https://source.unsplash.com/random/201x201" alt="Category">
                 <h3>Top Brands</h3>
@@ -49,19 +46,33 @@
                 <img src="https://source.unsplash.com/random/203x203" alt="Category">
                 <h3>Sale</h3>
             </div>
-        </div>
+        </section>
 
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="https://source.unsplash.com/random/301x301" class="product-image" alt="Product">
-                <h4>Men's T-Shirt</h4>
-                <p class="price">₹599</p>
-                <button>Shop Now</button>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/301x301" class="product-image" alt="Product">
+                    <h4>Men's T-Shirt</h4>
+                    <p class="price">₹599</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/302x302" class="product-image" alt="Product">
+                    <h4>Women's Dress</h4>
+                    <p class="price">₹999</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/303x303" class="product-image" alt="Product">
+                    <h4>Sneakers</h4>
+                    <p class="price">₹1499</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -88,7 +99,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 FashionStore. All rights reserved.</p>
+            <p>&copy; 2024 UrbanGlow. All rights reserved.</p>
         </div>
     </footer>
 </body>

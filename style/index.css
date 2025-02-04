@@ -7,7 +7,7 @@
 
 /* Header Styles */
 .header {
-    background-color: #AD87EC;  
+    background-color: #AD87EC;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,6 @@
 }
 
 .user-actions {
-    color: white;
     display: flex;
     gap: 20px;
 }
@@ -94,7 +93,7 @@
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -122,6 +121,20 @@
     color: #ff3f6c;
     font-weight: bold;
     margin: 10px 0;
+}
+
+.shop-btn {
+    background-color: #AD87EC;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #8b5fc1;
 }
 
 /* Footer Styles */

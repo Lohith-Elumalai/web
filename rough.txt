@@ -1,0 +1,9 @@
+  <!-- Brand Filter -->
+    <div class="filter-section">
+        <h3>Brand</h3>
+        <label><input type="checkbox"> DressBerry (1357)</label>
+        <label><input type="checkbox"> Baggy Malone (1064)</label>
+        <label><input type="checkbox"> Caprese (969)</label>
+        <label><input type="checkbox"> Lavie (722)</label>
+        <a href="#" class="show-more">+ 237 more</a>
+    </div>

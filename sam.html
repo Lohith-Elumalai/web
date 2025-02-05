@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanGlow</title>
+    <link rel="stylesheet" href="sam.css">
+    <script defer src="/javascript/sponsor.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="./resource/UG-logo.png" alt="logo" class="logo">
+            <div class="brand-name">UrbanGlow</div>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search for products, brands and more">
+        <div class="user-actions">
+            <span><img src="./resource/profile-icon.png" height="25px" width="25px"></span>
+            <span><img src="./resource/wishlist-icon.png" height="25px" width="25px"></span>
+            <span><img src="./resource/cart-icon.png" height="25px" width="25px"></span>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Studio</a></li>
+        </ul>
+    </nav>
+    <!-- Filter Sidebar HTML -->
+<aside class="filter-sidebar">
+    <h2>Filters</h2>
+    <button class="clear-filters" id="clearFiltersBtn">Clear All</button>
+
+    <!-- Categories Filter -->
+    <div class="filter-section">
+        <h3>Categories</h3>
+        <label><input type="checkbox" checked> Handbags (738)</label>
+        <label><input type="checkbox" checked> Wallets (198)</label>
+        <label><input type="checkbox"> Backpacks (47)</label>
+        <label><input type="checkbox"> Laptop Bag (23)</label>
+        <label><input type="checkbox" checked> Clutches (23)</label>
+        <label><input type="checkbox"> Waist Pouch (3)</label>
+        <a href="#" class="show-more">+ 1 more</a>l>
+    </div>
+
+    <!-- Brand Filter -->
+    <div class="filter-section">
+        <h3>Brand</h3>
+        <label><input type="checkbox"> DressBerry (1357)</label>
+        <label><input type="checkbox"> Baggy Malone (1064)</label>
+        <label><input type="checkbox"> Caprese (969)</label>
+        <label><input type="checkbox"> Lavie (722)</label>
+        <a href="#" class="show-more">+ 237 more</a>
+    </div>
+
+    <!-- Price Range Filter -->
+    <div class="filter-section">
+        <h3>Price</h3>
+        <input type="range" min="100" max="5500" value="1000" class="price-range">
+        <div class="price-values">
+            <span>₹100</span>
+            <span>3500+</span>
+        </div>
+    </div>
+
+    <!-- Color Filter -->
+    <div class="filter-section">
+        <h3>Color</h3>
+        <label><input type="checkbox"> Pink (123)</label>
+        <label><input type="checkbox"> Black (109)</label>
+        <label><input type="checkbox"> Blue (86)</label>
+        <label><input type="checkbox"> Green (69)</label>
+        <a href="#" class="show-more">+ 35 more</a>
+    </div>
+
+    <!-- Size Filter -->
+    <div class="filter-section">
+        <h3>Size</h3>
+        <label><input type="checkbox"> S</label>
+        <label><input type="checkbox"> M</label>
+        <label><input type="checkbox"> L</label>
+        <label><input type="checkbox"> XL</label>
+    </div>
+    <div class="filter-section">
+        <h4>Discount Range</h4>
+        <label><input type="checkbox"> 10% and above</label>
+        <label><input type="checkbox"> 20% and above</label>
+        <label><input type="checkbox"> 30% and above</label>
+        <label><input type="checkbox"> 40% and above</label>
+        <label><input type="checkbox" checked> 60% and above</label>
+        <label><input type="checkbox"> 70% and above</label>
+        
+    </div>
+</aside>
+
+    <main class="main-content">
+        <div class="banner"></div>
+
+        <section class="categories">
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/201x201" alt="Category">
+                <h3>Top Brands</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/202x202" alt="Category">
+                <h3>New Arrivals</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://source.unsplash.com/random/203x203" alt="Category">
+                <h3>Sale</h3>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/301x301" class="product-image" alt="Product">
+                    <h4>Men's T-Shirt</h4>
+                    <p class="price">₹599</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/302x302" class="product-image" alt="Product">
+                    <h4>Women's Dress</h4>
+                    <p class="price">₹999</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/303x303" class="product-image" alt="Product">
+                    <h4>Sneakers</h4>
+                    <p class="price">₹1499</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stores</h3>
+                <ul>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UrbanGlow. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

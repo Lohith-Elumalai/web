@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion E-Commerce</title>
+    <link rel="stylesheet" href="sponsor.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            
+            
+        </div>
+    </header>
+    <section class="banner">Display some other offers with pics</section>
+    <div class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <label><input type="checkbox"> Handbags</label>
+            <label><input type="checkbox"> Wallets</label>
+            <label><input type="checkbox"> Clutches</label>
+            <label><input type="checkbox"> Price Range</label>
+            <input type="range">
+        </aside>
+        <main class="product-grid">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Product">
+                <h4>Caprese Shopper Hobo Bag</h4>
+                <p>Rs. 899 <span class="discount">(70% OFF)</span></p>
+            </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Product">
+                <h4>Caprese Women Handheld Bag</h4>
+                <p>Rs. 1376 <span class="discount">(82% OFF)</span></p>
+            </div>
+            <!-- Add more product cards similarly -->
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background: #e0d0d0;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    margin: 20px;
+}
+.filters {
+    width: 20%;
+    padding: 10px;
+    background: #f4f4f4;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    padding: 10px;
+}
+.product-card {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.discount {
+    color: red;
+    font-weight: bold;
+}

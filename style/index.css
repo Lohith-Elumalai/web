@@ -193,82 +193,64 @@
     padding-top: 20px;
     border-top: 1px solid #444;
 }
-.slider {
+body {
+	background-color: #f8fafc;
+}
+
+.container {
+    
+	padding: 2rem;
+}
+
+.slider-wrapper {
     top: 150px;
-    width: 80%;
-    max-width: 80%;
-    max-height: 500px;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
 }
 
-.slides {
-    display: flex;
-    width: 400%;
-    transition: 0.6s ease;
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
-.slide {
-    width: 100%;
-    flex-shrink: 0;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: shrink;
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
 }
 
-.navigation-manual {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 10px;
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
 }
 
-.manual-btn {
-    border: 2px solid #ffffff;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: 0 5px;
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
 }
 
-.manual-btn:hover {
-    background: #ffffff;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-#radio1:checked ~ .first {
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-    margin-left: -100%;
-}
-
-#radio3:checked ~ .first {
-    margin-left: -200%;
-}
-
-#radio4:checked ~ .first {
-    margin-left: -300%;
-}
-
-/* Automatic Navigation */
-.navigation-auto div {
-    position: absolute;
-    bottom: 10px;
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    transition: background 0.4s;
+.slider-nav a:hover {
+	opacity: 1;
 }

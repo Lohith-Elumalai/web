@@ -22,6 +22,7 @@
 /* Navigation Styles */
 .nav-bar {
     position: fixed;
+
     top: 80px; /* Adjusted so it sits below the header */
     left: 0;
     width: 100%;

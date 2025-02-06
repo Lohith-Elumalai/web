@@ -143,7 +143,98 @@
     border-radius: 10%;
     margin-bottom: 10px;
 }
+/* Add these styles to your CSS */
+.interactive-products {
+    margin: 4rem 0;
+    padding: 2rem 0;
+}
 
+.interactive-products h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #2a2a2a;
+}
+
+.products-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.product-item {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+/*Collections*/
+.product-details {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-item:hover img {
+    transform: scale(1.2) translateX(-80%);
+    filter: brightness(0.8);
+}
+
+.product-item:hover .product-details {
+    right: 0%;
+    opacity: 1;
+    transform: translateY(-80%) rotate(0deg);
+}
+
+.product-details h3 {
+    color: #AD87EC;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.product-details p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-details .price {
+    color: #ff3f6c;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.product-details .shop-btn {
+    margin-top: 0.5rem;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

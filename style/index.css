@@ -307,8 +307,9 @@ body {
 .product-image {
     width: 80%;
     height: 300px;
-    object-fit: fill;
+    object-fit: fit;
     border-radius: 8px;
+    align: center;
 }
 
 .price {

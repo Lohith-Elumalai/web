@@ -68,7 +68,7 @@
 }
 /* Ensure the main content does not overlap with the nav-bar */
 .main-content {
-    margin-top: 140px; /* Adjusted to accommodate both header and nav-bar */
+    margin-top: 180px; /* Adjusted to accommodate both header and nav-bar */
     padding: 20px;
 }
 
@@ -238,7 +238,8 @@ body {
 }
 
 .slider-wrapper {
-    top: 150px;
+
+    margin-top: 20px;
 	position: relative;
 	max-width: 48rem;
 	margin: 0 auto;
@@ -298,7 +299,7 @@ body {
 
 .slider-wrapper {
     
-	position: relative;
+	position: absoulte;
 	max-width: 48rem;
 	margin: 0 auto;
 }

@@ -1,0 +1,129 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is B875-52B9
+C:.
+¦   career.html
+¦   ck1.html
+¦   ck2.html
+¦   ck3.html
+¦   ck4.html
+¦   ck5.html
+¦   cloth1.html
+¦   cloth2.html
+¦   cloth3.html
+¦   cloth4.html
+¦   cloth5.html
+¦   cm1.html
+¦   cm2.html
+¦   cm3.html
+¦   cm4.html
+¦   cm5.html
+¦   contact_us.html
+¦   content.txt
+¦   faq.html
+¦   index.html
+¦   kids.html
+¦   men.html
+¦   pending.txt
+¦   pp.html
+¦   returns.html
+¦   script.js
+¦   sponsor1.html
+¦   sponsor2.html
+¦   sponsor3.html
+¦   sponsor4.html
+¦   storeloc.html
+¦   structure.txt
+¦   styles.css
+¦   tou.html
+¦   women.html
+¦   
++---javascript
+¦       main.js
+¦       
++---resource
+¦       athletic shoes.jpg
+¦       beauty.jpg
+¦       beautynav.webp
+¦       brands.png
+¦       breathable snakeers'.webp
+¦       cart-icon.png
+¦       casual.png
+¦       Casualthickbase.jpg
+¦       ck1-side.jpg
+¦       ck1.jpg
+¦       ck2-side.jpg
+¦       ck2.jpg
+¦       ck3-side.jpg
+¦       ck3.jpg
+¦       ck4-side.jpg
+¦       ck4.jpg
+¦       ck5-side.jpg
+¦       ck5.jpg
+¦       clothing1-side.jpg
+¦       clothing1.jpg
+¦       clothing2-side.jpg
+¦       clothing2.jpg
+¦       clothing3-side.jpg
+¦       clothing3.jpg
+¦       clothing4-side.jpg
+¦       clothing4.jpg
+¦       clothing5-side.jpg
+¦       clothing5.jpg
+¦       clutches1.webp
+¦       clutches2.webp
+¦       cm1-side.jpg
+¦       cm1.jpg
+¦       cm2-side.jpg
+¦       cm2.jpg
+¦       cm3-side.jpg
+¦       cm3.jpg
+¦       cm4-side.jpg
+¦       cm4.jpg
+¦       cm5-side.jpg
+¦       cm5.jpg
+¦       formal.png
+¦       handbag1.avif
+¦       handbag2.avif
+¦       home.jpg
+¦       homenav.webp
+¦       ke1.png
+¦       ke2.png
+¦       kids.jpg
+¦       kidsnav.jpg
+¦       me1.png
+¦       me2.png
+¦       Men's white shoes.jpg
+¦       men.webp
+¦       mennav.jpg
+¦       menstshirt.webp
+¦       newarrivals.png
+¦       profile-icon.png
+¦       sale.png
+¦       slide1.png
+¦       slide2.png
+¦       slide3.jpg
+¦       slide4.jpg
+¦       slipon formals.webp
+¦       sneakers.webp
+¦       sports.png
+¦       tancasuals.avif
+¦       UG-logo.png
+¦       wallet1.webp
+¦       wallet2.jpg
+¦       we1.png
+¦       we2.png
+¦       wfk1.jpg
+¦       wfk2.png
+¦       wfm1.jpg
+¦       wfm2.webp
+¦       wfw1.jpg
+¦       wfw2.webp
+¦       wishlist-icon.png
+¦       women
+¦       womennav.jpg
+¦       womensdress.webp
+¦       
++---style
+        index.css
+        sponsor.css
+        

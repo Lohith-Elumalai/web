@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Challenges | Urban Garb</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <!-- React and ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="challenges-hero">
+            <div class="container">
+                <h1>Style Challenges</h1>
+                <p>Showcase your fashion sense, vote for your favorites, and win exciting rewards!</p>
+                <div class="cta-buttons">
+                    <a href="create-challenge.html" class="btn primary-btn">Create Challenge</a>
+                    <a href="#active-challenges" class="btn secondary-btn">Participate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="active-challenges" class="active-challenges">
+            <div class="container">
+                <h2>Active Challenges</h2>
+                <div class="filter-bar">
+                    <div class="search-box">
+                        <input type="text" id="challenge-search" placeholder="Search challenges...">
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="summer">Summer</option>
+                            <option value="office">Office</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                            <option value="party">Party</option>
+                        </select>
+                        <select id="sort-filter">
+                            <option value="newest">Newest First</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="ending">Ending Soon</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- React app will mount here -->
+                <div id="challenges-container"></div>
+            </div>
+        </section>
+
+        <section class="rewards-info">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Create or Join</h3>
+                        <p>Create a new challenge or participate in existing ones</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Submit Outfit</h3>
+                        <p>Combine products from our store to create your perfect outfit</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Vote & Share</h3>
+                        <p>Vote for your favorites and share with friends</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Win Rewards</h3>
+                        <p>Earn points, discounts, and climb the leaderboard</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="past-winners">
+            <div class="container">
+                <h2>Winner's Circle</h2>
+                <div class="winners-gallery">
+                    <!-- These will be populated dynamically -->
+                    <div class="winner-card">
+                        <div class="winner-outfit">
+                            <img src="resource/placeholder-outfit.jpg" alt="Winning outfit">
+                        </div>
+                        <div class="winner-info">
+                            <h3>Summer Vibes Challenge</h3>
+                            <p class="winner-name">@fashionista92</p>
+                            <p class="votes"><span>247</span> votes</p>
+                        </div>
+                    </div>
+                    <!-- More winner cards will be populated here -->
+                </div>
+                <a href="leaderboard.html" class="btn secondary-btn">View Leaderboard</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- React Components -->
+    <script type="text/babel" src="components/ChallengeCard.js"></script>
+    <script type="text/babel" src="components/OutfitSubmission.js"></script>
+    <script type="text/babel" src="js/challenges.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

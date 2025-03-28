@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Champions Leaderboard | Urban Garb</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <!-- React and ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="leaderboard-hero">
+            <div class="container">
+                <h1>Style Champions Leaderboard</h1>
+                <p>Top fashion enthusiasts showcasing their impeccable style sense</p>
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <div class="container">
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="monthly">Monthly</button>
+                    <button class="tab-btn" data-tab="alltime">All Time</button>
+                </div>
+                
+                <div class="leaderboard-filters">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="summer">Summer</option>
+                        <option value="office">Office</option>
+                        <option value="casual">Casual</option>
+                        <option value="formal">Formal</option>
+                        <option value="party">Party</option>
+                    </select>
+                </div>
+                
+                <div class="top-champions">
+                    <div class="champion runner-up">
+                        <div class="position">2</div>
+                        <div class="champion-avatar">
+                            <img src="resource/profile-icon.png" alt="Runner Up">
+                        </div>
+                        <div class="champion-info">
+                            <h3>StyleQueen</h3>
+                            <p class="points">3,240 points</p>
+                            <p class="challenges-won">7 challenges won</p>
+                        </div>
+                    </div>
+                    
+                    <div class="champion winner">
+                        <div class="position">1</div>
+                        <div class="champion-avatar">
+                            <img src="resource/profile-icon.png" alt="Winner">
+                            <div class="crown">👑</div>
+                        </div>
+                        <div class="champion-info">
+                            <h3>FashionGuru</h3>
+                            <p class="points">4,120 points</p>
+                            <p class="challenges-won">12 challenges won</p>
+                        </div>
+                    </div>
+                    
+                    <div class="champion third-place">
+                        <div class="position">3</div>
+                        <div class="champion-avatar">
+                            <img src="resource/profile-icon.png" alt="Third Place">
+                        </div>
+                        <div class="champion-info">
+                            <h3>TrendSetter</h3>
+                            <p class="points">2,890 points</p>
+                            <p class="challenges-won">5 challenges won</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- React component will be mounted here -->
+                <div id="leaderboard-table-container"></div>
+                
+                <div class="reward-tiers">
+                    <h3>Reward Tiers</h3>
+                    <div class="tiers-grid">
+                        <div class="tier">
+                            <div class="tier-header">
+                                <h4>Bronze</h4>
+                                <span class="points-required">0-1000 points</span>
+                            </div>
+                            <div class="tier-rewards">
+                                <ul>
+                                    <li>5% discount on next purchase</li>
+                                    <li>Participation badge</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="tier">
+                            <div class="tier-header">
+                                <h4>Silver</h4>
+                                <span class="points-required">1001-3000 points</span>
+                            </div>
+                            <div class="tier-rewards">
+                                <ul>
+                                    <li>10% discount on next purchase</li>
+                                    <li>Early access to new collections</li>
+                                    <li>Special badge on profile</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="tier">
+                            <div class="tier-header">
+                                <h4>Gold</h4>
+                                <span class="points-required">3001-5000 points</span>
+                            </div>
+                            <div class="tier-rewards">
+                                <ul>
+                                    <li>15% discount on next purchase</li>
+                                    <li>Free shipping for 3 months</li>
+                                    <li>Featured spot on homepage</li>
+                                    <li>Style influencer badge</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="tier">
+                            <div class="tier-header">
+                                <h4>Platinum</h4>
+                                <span class="points-required">5001+ points</span>
+                            </div>
+                            <div class="tier-rewards">
+                                <ul>
+                                    <li>20% discount for 6 months</li>
+                                    <li>Free shipping for 1 year</li>
+                                    <li>Exclusive access to VIP events</li>
+                                    <li>Opportunity to create an official challenge</li>
+                                    <li>Fashion expert badge</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- React Components -->
+    <script type="text/babel" src="components/LeaderboardTable.js"></script>
+    <script type="text/babel" src="js/leaderboard.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

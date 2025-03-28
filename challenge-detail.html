@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Details | Urban Garb</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <!-- React and ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="challenge-header">
+            <div class="container">
+                <div class="challenge-breadcrumb">
+                    <a href="challenges.html">Challenges</a> &gt; <span id="challenge-title">Challenge Title</span>
+                </div>
+                <div class="challenge-info">
+                    <h1 id="challenge-title-display">Challenge Title</h1>
+                    <div class="challenge-meta">
+                        <span class="challenge-category" id="challenge-category">Category</span>
+                        <span class="challenge-deadline" id="challenge-deadline">Ends in 3 days</span>
+                        <span class="challenge-entries" id="challenge-entries">24 entries</span>
+                    </div>
+                    <p id="challenge-description">Challenge description will be displayed here.</p>
+                    <div class="challenge-prize">
+                        <h3>Prize</h3>
+                        <p id="challenge-prize-description">Prize details will be displayed here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="submission-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Submit Your Entry</h2>
+                </div>
+                <!-- React component will be mounted here -->
+                <div id="submission-form-container"></div>
+            </div>
+        </section>
+
+        <section class="entries-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entries</h2>
+                    <div class="entries-filter">
+                        <select id="entries-sort">
+                            <option value="newest">Newest</option>
+                            <option value="most-voted">Most Voted</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- React component will be mounted here -->
+                <div id="entries-container"></div>
+            </div>
+        </section>
+
+        <section class="related-challenges">
+            <div class="container">
+                <h2>More Challenges</h2>
+                <div id="related-challenges-container" class="challenges-grid">
+                    <!-- Will be populated dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- React Components -->
+    <script type="text/babel" src="components/OutfitSubmission.js"></script>
+    <script type="text/babel" src="components/VotingSystem.js"></script>
+    <script type="text/babel" src="js/challenge-detail.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

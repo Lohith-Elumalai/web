@@ -1,0 +1,387 @@
+/* Leaderboard CSS */
+
+/* Hero Section */
+.leaderboard-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../resource/slide3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.leaderboard-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.leaderboard-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Leaderboard Section */
+.leaderboard-section {
+    padding: 60px 0;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #ff5722;
+}
+
+.tab-btn.active {
+    border-bottom-color: #ff5722;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.leaderboard-filters {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.leaderboard-filters select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Top Champions */
+.top-champions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.champion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.champion:hover {
+    transform: translateY(-5px);
+}
+
+.position {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.champion.winner {
+    padding-top: 40px;
+    z-index: 2;
+    background: linear-gradient(to bottom, #ffd700, white 40%);
+}
+
+.champion.winner .position {
+    background-color: #ffd700;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.champion.runner-up {
+    background: linear-gradient(to bottom, #c0c0c0, white 30%);
+}
+
+.champion.runner-up .position {
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+.champion.third-place {
+    background: linear-gradient(to bottom, #cd7f32, white 30%);
+}
+
+.champion.third-place .position {
+    background-color: #cd7f32;
+    color: white;
+}
+
+.champion-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.champion.winner .champion-avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.champion-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crown {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.champion-info {
+    text-align: center;
+}
+
+.champion-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.champion.winner .champion-info h3 {
+    font-size: 1.4rem;
+}
+
+.points {
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 5px;
+}
+
+.challenges-won {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Leaderboard Table */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table th {
+    background-color: #f5f5f5;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.leaderboard-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.leaderboard-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.leaderboard-table .rank {
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.leaderboard-table .user {
+    display: flex;
+    align-items: center;
+}
+
+.leaderboard-table .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.leaderboard-table .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leaderboard-table .username {
+    font-weight: bold;
+}
+
+.leaderboard-table .points {
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.leaderboard-table .challenges-won {
+    color: #666;
+}
+
+.leaderboard-table .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.leaderboard-table .badge.bronze {
+    background-color: #cd7f32;
+    color: white;
+}
+
+.leaderboard-table .badge.silver {
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+.leaderboard-table .badge.gold {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.leaderboard-table .badge.platinum {
+    background: linear-gradient(to right, #e5e4e2, #b9f2ff);
+    color: #333;
+}
+
+/* Reward Tiers */
+.reward-tiers {
+    margin-top: 60px;
+}
+
+.reward-tiers h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tier {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tier-header {
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.tier:nth-child(1) .tier-header {
+    background-color: #cd7f32;
+}
+
+.tier:nth-child(2) .tier-header {
+    background-color: #c0c0c0;
+}
+
+.tier:nth-child(3) .tier-header {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.tier:nth-child(4) .tier-header {
+    background: linear-gradient(to right, #e5e4e2, #b9f2ff);
+    color: #333;
+}
+
+.tier-header h4 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.points-required {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.tier-rewards {
+    padding: 20px;
+}
+
+.tier-rewards ul {
+    padding-left: 20px;
+}
+
+.tier-rewards li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-champions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .champion {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .champion.winner {
+        order: -1;
+    }
+    
+    .leaderboard-table .rank,
+    .leaderboard-table .challenges-won,
+    .leaderboard-table .badge {
+        display: none;
+    }
+    
+    .tiers-grid {
+        grid-template-columns: 1fr;
+    }
+}

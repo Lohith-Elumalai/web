@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Challenge | Urban Garb</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <!-- React and ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="create-challenge-hero">
+            <div class="container">
+                <h1>Create Your Own Style Challenge</h1>
+                <p>Design a challenge that inspires others and showcases your fashion expertise</p>
+            </div>
+        </section>
+
+        <section class="create-challenge-form">
+            <div class="container">
+                <!-- React component will be mounted here -->
+                <div id="challenge-form-container"></div>
+            </div>
+        </section>
+
+        <section class="challenge-guidelines">
+            <div class="container">
+                <h2>Challenge Guidelines</h2>
+                <div class="guidelines-grid">
+                    <div class="guideline">
+                        <div class="guideline-icon">🎯</div>
+                        <h3>Be Specific</h3>
+                        <p>Define clear criteria for your challenge to help participants understand what you're looking for.</p>
+                    </div>
+                    <div class="guideline">
+                        <div class="guideline-icon">💡</div>
+                        <h3>Be Creative</h3>
+                        <p>Think outside the box and create challenges that inspire unique and innovative outfit combinations.</p>
+                    </div>
+                    <div class="guideline">
+                        <div class="guideline-icon">🤝</div>
+                        <h3>Be Inclusive</h3>
+                        <p>Create challenges that allow participation across different styles, genders, and fashion preferences.</p>
+                    </div>
+                    <div class="guideline">
+                        <div class="guideline-icon">📅</div>
+                        <h3>Set Reasonable Timeframes</h3>
+                        <p>Give participants enough time to create and submit their entries while keeping the challenge exciting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- React Components -->
+    <script type="text/babel" src="components/ChallengeForm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
